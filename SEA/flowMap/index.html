@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />  
+  <title>Canvas Flowmap Layer with LeafletJS - SEA</title>
+
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+  <div id="map"></div>
+
+  <!-- first load LeafletJS -->
+  <script src="https://unpkg.com/leaflet@1.3/dist/leaflet.js"></script>
+
+  <!-- load Esri Leaflet because we want to use an Esri basemap -->
+  <script src="https://unpkg.com/esri-leaflet@2.1/dist/esri-leaflet.js"></script>
+
+  <!-- load animation tweening lib requirement for CanvasFlowMapLayer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+
+  <!-- then load CanvasFlowMapLayer -->
+  <script src="CanvasFlowmapLayer.js"></script>
+
+  <!-- also load 3rd-party CSV parsing libary just for this demo  -->
+  <script src="https://unpkg.com/papaparse@4.3/papaparse.min.js"></script>
+  
+  <script>
+    var map = L.map('map');
+
+    if (L.Browser.mobile) {
+      map.setView([0,0], 2);
+    } else {
+      map.setView([48.977157, 16.978353], 3);
+    }
+
+    L.esri.basemapLayer('Gray').addTo(map);
+
+    Papa.parse('fm_data.csv', {
+      download: true,
+      header: true,
+      dynamicTyping: true,
+      skipEmptyLines: true,
+      complete: function(results) {
+        var geoJsonFeatureCollection = {
+          type: 'FeatureCollection',
+          features: results.data.map(function(datum) {
+            return {
+              type: 'Feature',
+              geometry: {
+                type: 'Point',
+                coordinates: [datum.s_lon, datum.s_lat]
+              },
+              properties: datum
+            }
+          })
+        };
+
+        var oneToManyFlowmapLayer = L.canvasFlowmapLayer(geoJsonFeatureCollection, {
+          originAndDestinationFieldIds: {
+            originUniqueIdField: 's_country_id',
+            originGeometry: {
+              x: 's_lon',
+              y: 's_lat'
+            },
+            destinationUniqueIdField: 'e_country_id',
+            destinationGeometry: {
+              x: 'e_lon',
+              y: 'e_lat'
+            }
+          },
+          pathDisplayMode: 'selection',
+          animationStarted: true,
+          animationEasingFamily: 'Cubic',
+          animationEasingType: 'In',
+          animationDuration: 2000
+        }).addTo(map);
+
+        // since this demo is using the optional "pathDisplayMode" as "selection",
+        // it is up to the developer to wire up a click or mouseover listener
+        // and then call the "selectFeaturesForPathDisplay()" method to inform the layer
+        // which Bezier paths need to be drawn
+        oneToManyFlowmapLayer.on('click', function(e) {
+          if (e.sharedOriginFeatures.length) {
+            oneToManyFlowmapLayer.selectFeaturesForPathDisplay(e.sharedOriginFeatures, 'SELECTION_NEW');
+          }
+          if (e.sharedDestinationFeatures.length) {
+            oneToManyFlowmapLayer.selectFeaturesForPathDisplay(e.sharedDestinationFeatures, 'SELECTION_NEW');
+          }
+        });
+
+        // immediately select an origin point for Bezier path display,
+        // instead of waiting for the first user click event to fire
+        oneToManyFlowmapLayer.selectFeaturesForPathDisplayById('s_city_id', 562, true, 'SELECTION_NEW');
+      }
+    });
+
+
+    // CustomControl
+    L.Control.customControl = L.Control.extend({
+
+      onAdd: function(map) {
+            var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom'); // classebis saxeli rac ginda chawere, eg prosta magalitistvis
+
+            // container. - amas wer da mere chveulebrivi JS syntaxi risic damateba, css shecvla ginda (anu .this pontia ra)
+            // container.innerHTML = 'Text text'; // ase shegidzlia chawero rac ginda
+            
+
+            container.innerHTML = '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\'red.png\'> &nbsp;&nbsp;Odkud <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\'green.png\'>  &nbsp;&nbsp;Kam';
+           // container.innerHTML = '<br><br><img src=\'green.png\'> Kam';
+
+           container.style.backgroundColor = 'white';
+           container.style.backgroundImage = "url(infomap.png)";
+           container.style.backgroundSize = "100% 100%";
+           container.style.backgroundRepeat = "no-repeat";
+           container.style.width = '90px';
+           container.style.height = '70px';
+
+            // daklikebaze raime funkcia tu ginda es gamoitene
+            // container.onclick = function(){
+            //   console.log('buttonClicked');
+            // }
+
+            return container;
+          }
+        });
+
+    L.control.customControl = function(opts) {
+      return new L.Control.customControl(opts);
+    }
+
+    L.control.customControl({ position: 'bottomleft' }).addTo(map); // topleft / bottomleft / topright / bottomright
+
+  </script>
+
+</body>
+</html>

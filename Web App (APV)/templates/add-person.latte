@@ -1,0 +1,41 @@
+{extends layout.latte}
+
+{block title}Nova osoba{/block}
+
+{block body}
+
+<div class="container">
+
+    <h1>Pridani nove osoby</h1>
+
+    <form method="post" class="form-horizontal">
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">S kym *</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="osoba" required>
+                    <option value="">Vyber osobu</option>
+                    {foreach $osoby as $os}
+                        <option value="{$os['id_person']}" {if $os['id_person'] == $nMeeting['osoba']}selected="selected"{/if}>
+                            {$os['first_name']} {$os['last_name']}
+                        </option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                        Pridat novou osobu
+                    </span>
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+{/block}

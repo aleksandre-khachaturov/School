@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gameLod" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/gameLod" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/gameLod" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Hra.cpp" />
+		<Unit filename="Hra.h" />
+		<Unit filename="Inventar.cpp" />
+		<Unit filename="Inventar.h" />
+		<Unit filename="Lod.cpp" />
+		<Unit filename="Lod.h" />
+		<Unit filename="Mapa.cpp" />
+		<Unit filename="Mapa.h" />
+		<Unit filename="Obrana.cpp" />
+		<Unit filename="Obrana.h" />
+		<Unit filename="Pirat.cpp" />
+		<Unit filename="Pirat.h" />
+		<Unit filename="Planeta.cpp" />
+		<Unit filename="Planeta.h" />
+		<Unit filename="SilnaObrana.cpp" />
+		<Unit filename="SilnaObrana.h" />
+		<Unit filename="SlabaObrana.cpp" />
+		<Unit filename="SlabaObrana.h" />
+		<Unit filename="Suroviny.cpp" />
+		<Unit filename="Suroviny.h" />
+		<Unit filename="Zbran.cpp" />
+		<Unit filename="Zbran.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

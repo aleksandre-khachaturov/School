@@ -1,0 +1,35 @@
+{extends layout.latte}
+
+{block title}Vypis vztah{/block}
+
+{block body}
+
+<div class="container">
+
+  <h1>Seznam schuzek</h1>
+
+  <div class="table-responsive">
+    <table class="table table-striped table table-hover">
+      <tr>
+        <th>Město</th>
+        <th>Datum a čas</th>
+        <th>Popis</th>
+        <th>Doba konání</th>
+      </tr>
+
+      {foreach $schuzky as $sch}
+
+      <tr>
+        <td>{$sch['city']}</td>        
+        <td>{$sch['start']}</td>
+        <td>{$sch['description']}</td>
+        <td>{$sch['duration']}</td>
+      </tr> 
+
+      {/foreach}
+      
+    </table>
+
+  </div>
+</div>
+</block>

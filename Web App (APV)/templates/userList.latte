@@ -1,0 +1,36 @@
+{extends layout.latte}
+
+{block title}USERS{/block}
+
+{block body}
+
+<div class="container">
+
+	<h1>User list</h1>
+	<br>
+	<div class="table-responsive">
+		<table class="table table-striped table table-hover">
+			<tr>
+				<th>Loginy opravnenych uzivatelu</th>
+				<th>Smazat</th>
+			</tr>
+			{foreach $users as $uz}
+			<tr>
+				<td>{$uz['login']}</td>
+				<td>
+					<form onsubmit = "return confirm
+					('Opravdu chcete smazat vybrany account?')" 
+					action = "{link deleteAcc}" 
+					method="post">
+					<input type="hidden" name="id" value="{$uz['id_account']}">
+					<button type="submit" class="btn btn-danger">
+						<span class="glyphicon glyphicon-trash"></span>
+					</button>
+				</td>
+			</tr>
+			{/foreach}
+		</table>
+
+	</div>
+</div>
+</block>

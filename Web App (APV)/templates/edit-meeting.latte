@@ -1,0 +1,59 @@
+{extends layout.latte}
+
+{block title}Editace osoby{/block}
+
+{block body}
+
+
+
+<form method="post" class="form-horizontal">
+    <div class="container">
+        <h1>Uprava domluvenych schuzek</h1><br>
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Mesto</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="idLoc" required>
+                    <option value="">Vyber misto</option>
+                    {foreach  $location as $lo}
+                        <option value="{$lo['id_location']}" {if $lo['id_location'] == $schuzka['id_location']}selected="selected"{/if}>
+                            {$lo['city']}, {$lo['street_name']}, {$lo['street_number']}
+                        </option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Cas</label>
+            <div class="col-sm-4">
+                <input name="start" type="datetime" class="form-control"  value="{$schuzka['start']}" required><br>
+            </div>
+        </div>
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Popis schuzky</label>
+            <div class="col-sm-4">
+                <input name="descr" type="text" class="form-control"  value="{$schuzka['description']}"><br>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Delka schuzky</label>
+            <div class="col-sm-4">
+                <input name="dur" type="time" class="form-control"  value="{$schuzka['duration']}"><br>
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                        Upravit
+                    </span>
+                </button>
+            </div>
+        </div>
+
+</form>
+</block>

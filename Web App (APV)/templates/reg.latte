@@ -1,0 +1,22 @@
+{extends layout.latte}
+
+{block title}Registrace noveho uzivatele DB{/block}
+{block body}
+
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <form class="well" method="post">
+      <label>Login userName</label>
+      <input type="text" name="login" class="form-control" required value='{$user['login']}'>
+      <br>
+      <label>Heslo</label>
+      <input type="password" name="heslo" class="form-control" required value='{$user['heslo']}'>
+      <br>
+      <label>Heslo jeste jednou</label>
+      <input type="password" name="heslo2" class="form-control" required value='{$user['heslo2']}'>
+      <br>
+      <input type="submit" value="Registrace" class="btn btn-primary">
+    </form>
+  </div>
+</div>
+{/block}

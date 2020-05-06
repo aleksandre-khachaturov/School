@@ -1,0 +1,36 @@
+{extends layout.latte}
+
+{block title}Vypis vztah{/block}
+
+{block body}
+
+<div class="container">
+
+    <h1>Seznam vztahu</h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped table table-hover">
+            <tr>
+                <th>Jmeno 1</th>
+                <th>Prijmeni 1</th>
+                <th>Jmeno 2</th>
+                <th>Prijmeni 2</th>
+                <th>Popis</th>
+                <th>Typ vztahu</th>
+            </tr>
+            {foreach $osoby as $os}
+            <tr>
+                <td>{$os ['first_name1']}</td>
+                <td>{$os ['last_name1']}</td>
+                <td>{$os ['first_name2']}</td>
+                <td>{$os ['last_name2']}</td>
+                <td>{$os ['description']}</td>
+                <td>{$os ['id_relation_type']}</td>
+                
+            </tr>
+            {/foreach}
+        </table>
+
+    </div>
+</div>
+</block>

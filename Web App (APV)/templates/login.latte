@@ -1,0 +1,25 @@
+{extends layout.latte}
+
+{block title}LOGIN{/block}
+
+{block body}
+
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <form class="well" method="post">
+            <lable>Login</lable>
+            <input type="text" name="login" class="form-control">
+            <br>
+            <lable>Password</lable>
+            <input type="password" name="pass" class="form-control">
+            <br>
+            <input type="submit" class="btn btn-primary" value="Sign In">
+            <a href='{link reg}'>
+                <button type="button" class="btn btn-primary">Registration</button>
+            </a>
+
+
+        </form>
+    </div>
+
+    {/block}

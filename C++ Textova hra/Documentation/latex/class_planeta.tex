@@ -1,0 +1,77 @@
+\hypertarget{class_planeta}{}\section{Planeta Class Reference}
+\label{class_planeta}\index{Planeta@{Planeta}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_planeta_a986261fdd4028ffb72f19e3adb03d244}\label{class_planeta_a986261fdd4028ffb72f19e3adb03d244}} 
+{\bfseries Planeta} (string nazev, int cena\+Za\+Prodej, int cena\+Za\+Nakup, \hyperlink{class_pirat}{Pirat} $\ast$pirat)
+\item 
+\mbox{\Hypertarget{class_planeta_a1b8778d99a9e6e102b7af3b9411494d7}\label{class_planeta_a1b8778d99a9e6e102b7af3b9411494d7}} 
+string {\bfseries get\+Nazev} ()
+\item 
+\mbox{\Hypertarget{class_planeta_ad6e87052013c2013f765e7914850743a}\label{class_planeta_ad6e87052013c2013f765e7914850743a}} 
+\hyperlink{class_suroviny}{Suroviny} $\ast$ {\bfseries get\+Surovina} (int kolikata)
+\item 
+\mbox{\Hypertarget{class_planeta_a322fc8b1673aa32921db8794ded212b9}\label{class_planeta_a322fc8b1673aa32921db8794ded212b9}} 
+\hyperlink{class_lod}{Lod} $\ast$ {\bfseries get\+Lod} ()
+\item 
+\mbox{\Hypertarget{class_planeta_af53f32a0b7af3d8f6a1094d57e469bda}\label{class_planeta_af53f32a0b7af3d8f6a1094d57e469bda}} 
+\hyperlink{class_pirat}{Pirat} $\ast$ {\bfseries get\+Pirat} ()
+\item 
+\mbox{\Hypertarget{class_planeta_af3757b4e848ce39dbb842d7a750ae5b1}\label{class_planeta_af3757b4e848ce39dbb842d7a750ae5b1}} 
+int {\bfseries get\+Cena\+Za\+Prodej} ()
+\item 
+\mbox{\Hypertarget{class_planeta_abf036d0bf62d574d7d4def69a3668652}\label{class_planeta_abf036d0bf62d574d7d4def69a3668652}} 
+int {\bfseries get\+Cena\+Za\+Nakup} ()
+\item 
+\mbox{\Hypertarget{class_planeta_a3479d0ede2fdaf3d8912de2b95b22d14}\label{class_planeta_a3479d0ede2fdaf3d8912de2b95b22d14}} 
+void {\bfseries set\+Lod} (\hyperlink{class_lod}{Lod} $\ast$lod)
+\item 
+\mbox{\Hypertarget{class_planeta_a3923b1840a785226d82e1057bd9ab6f3}\label{class_planeta_a3923b1840a785226d82e1057bd9ab6f3}} 
+void {\bfseries pridej\+Surovinu} (\hyperlink{class_suroviny}{Suroviny} $\ast$surovina)
+\item 
+\mbox{\Hypertarget{class_planeta_a394655c56d2ba72fdab3720f23e2f31f}\label{class_planeta_a394655c56d2ba72fdab3720f23e2f31f}} 
+void {\bfseries odeber\+Surovinu} (int kolikata)
+\item 
+\mbox{\Hypertarget{class_planeta_a32fb35d5ecc6e98538fd616c7f9dc033}\label{class_planeta_a32fb35d5ecc6e98538fd616c7f9dc033}} 
+void {\bfseries boj} (\hyperlink{class_lod}{Lod} $\ast$lod)
+\item 
+\mbox{\Hypertarget{class_planeta_aded4c9c54fa3266417d3852e435b6464}\label{class_planeta_aded4c9c54fa3266417d3852e435b6464}} 
+void {\bfseries nakup\+Surovin} ()
+\item 
+\mbox{\Hypertarget{class_planeta_ad4b9d4c317d4d984f4bd416a3aea22b6}\label{class_planeta_ad4b9d4c317d4d984f4bd416a3aea22b6}} 
+void {\bfseries prodej\+Surovin} ()
+\item 
+\mbox{\Hypertarget{class_planeta_a05fd163f88a54307ed6ef5345b24f85a}\label{class_planeta_a05fd163f88a54307ed6ef5345b24f85a}} 
+void {\bfseries menu} (\hyperlink{class_lod}{Lod} $\ast$lod)
+\item 
+\mbox{\Hypertarget{class_planeta_aa05930623310c5dfbb5169df606ecae0}\label{class_planeta_aa05930623310c5dfbb5169df606ecae0}} 
+void {\bfseries print\+Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_planeta_a010a965fab8260a481619bf8a20f5fc5}\label{class_planeta_a010a965fab8260a481619bf8a20f5fc5}} 
+string {\bfseries m\+\_\+nazev}
+\item 
+\mbox{\Hypertarget{class_planeta_a0f1ea1020c9c9c28b2a42a8fce3324c3}\label{class_planeta_a0f1ea1020c9c9c28b2a42a8fce3324c3}} 
+vector$<$ \hyperlink{class_suroviny}{Suroviny} $\ast$ $>$ {\bfseries m\+\_\+suroviny}
+\item 
+\mbox{\Hypertarget{class_planeta_a0165a95c2b317ab6679b4674995e5e62}\label{class_planeta_a0165a95c2b317ab6679b4674995e5e62}} 
+\hyperlink{class_lod}{Lod} $\ast$ {\bfseries m\+\_\+lod}
+\item 
+\mbox{\Hypertarget{class_planeta_a3ba0f98683d50d0a254dccf2f0005d4f}\label{class_planeta_a3ba0f98683d50d0a254dccf2f0005d4f}} 
+\hyperlink{class_pirat}{Pirat} $\ast$ {\bfseries m\+\_\+pirat}
+\item 
+\mbox{\Hypertarget{class_planeta_a1167f2e3f48dc202575623da6862de95}\label{class_planeta_a1167f2e3f48dc202575623da6862de95}} 
+int {\bfseries m\+\_\+cena\+Za\+Prodej}
+\item 
+\mbox{\Hypertarget{class_planeta_a0f305cffd46d4c9a441959942b439af5}\label{class_planeta_a0f305cffd46d4c9a441959942b439af5}} 
+int {\bfseries m\+\_\+cena\+Za\+Nakup}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Aleksandre/\+Desktop/\+R\+E\+P\+O\+R\+Z\+I\+T\+A\+R/game\+Code/game\+Lod/Planeta.\+h\item 
+C\+:/\+Users/\+Aleksandre/\+Desktop/\+R\+E\+P\+O\+R\+Z\+I\+T\+A\+R/game\+Code/game\+Lod/Planeta.\+cpp\end{DoxyCompactItemize}

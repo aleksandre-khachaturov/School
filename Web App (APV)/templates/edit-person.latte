@@ -1,0 +1,104 @@
+{extends layout.latte}
+
+{block title}Editace osoby{/block}
+
+{block body}
+
+
+
+<form method="post" class="form-horizontal">
+    <div class="container">
+        <h1>Nova osoba</h1>
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Jmeno</label>
+            <div class="col-sm-4">
+                <input type="hidden" name="poc" type="number" value="{$pocet['pocet']}">
+                <input class="form-control"  name="jm" type="text" class="form-control" value="{$person['jm']}"><br>
+            </div>
+        </div>
+
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Prijmeni</label>
+            <div class="col-sm-4">
+                <input name="pr" type="text" class="form-control"  value="{$person['pr']}"><br>
+            </div>
+        </div>
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Prezdivka</label>
+            <div class="col-sm-4">
+                <input name="pz" type="text" class="form-control" value="{$person['pz']}"><br>
+            </div>
+        </div>
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label">Datum narozeni</label>
+            <div class="col-sm-4">
+                <input name="dn" class="form-control"  type="date" value="{$person['dn']}"><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Pohlavi</label>
+            <div class="col-sm-4">
+                <select name="po"  class="form-control" >
+                    <option value="male"
+                    {if $person['po'] == "male"}selected{/if}>Muz</option>
+                    <option value="female" 
+                    {if $person['po'] == "female"}selected{/if}>Zena</option>
+                </select><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Vyska</label>
+            <div class="col-sm-4">
+                <input name="vy" class="form-control" type="number" value="{$person['vy']}"><br>
+            </div>
+        </div>
+
+
+        <h1>Adresni udaje</h1><br>
+        
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Mesto</label>
+            <div class="col-sm-4">
+                <input name="mesto" class="form-control" type="text" value="{$location['mesto']}"><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Ulice</label>
+            <div class="col-sm-4">
+                <input name="ulice" class="form-control" type="text" value="{$location['ulice']}"><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Cislo domu</label>
+            <div class="col-sm-4">
+                <input name="dom" class="form-control" type="number" value="{$location['dom']}"><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">PSC</label>
+            <div class="col-sm-4">
+                <input name="psc" class="form-control" type="number" value="{$location['psc']}"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                    Upravit
+                </span>
+            </button>
+        </div>
+    </div>
+
+</form>
+</block>

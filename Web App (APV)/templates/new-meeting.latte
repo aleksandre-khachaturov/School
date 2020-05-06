@@ -1,0 +1,78 @@
+{extends layout.latte}
+
+{block title}Nova schuzka{/block}
+
+{block body}
+
+<div class="container">
+
+    <h1>Pridani nove schuzky</h1>
+
+    <form method="post" class="form-horizontal">
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Mesto *</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="misto" required>
+                    <option value="">Vyber misto</option>
+                    {foreach  $location as $lo}
+                    <option value="{$lo['id_location']}" {if $lo['id_location'] == $nMeeting['misto']}selected="selected"{/if}>
+                        {$lo['city']}, {$lo['street_name']}, {$lo['street_number']}
+                    </option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Cas *</label>
+            <div class="col-sm-4">
+                <input name="cas" type="datetime-local" class="form-control" value="{$nMeeting['cas']}" required><br>
+            </div>
+        </div>
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Popis schuzky</label>
+            <div class="col-sm-4">
+                <input name="popisSchuzky" type="text" class="form-control"  value="{$nMeeting['popisSchuzky']}"><br>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Delka schuzky</label>
+            <div class="col-sm-4">
+                <input name="delkaSchuzky" type="time" class="form-control" value="{$nMeeting['delkaSchuzky']}"><br>
+            </div>
+        </div>
+
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">S kym *</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="osoba" required>
+                    <option value="">Vyber osobu</option>
+                    {foreach $osoby as $os}
+                    <option value="{$os['id_person']}" {if $os['id_person'] == $nMeeting['osoba']}selected="selected"{/if}>
+                        {$os['first_name']} {$os['last_name']}
+                    </option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                        Pridat novou schuzku
+                    </span>
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+{/block}

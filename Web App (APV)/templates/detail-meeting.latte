@@ -1,0 +1,96 @@
+{extends layout.latte}
+
+{block title}Detaily osoby{/block}
+
+{block body}
+
+<div class="container">
+
+    <h1>Detaily schuzky</h1><br>
+
+    <table class="table table-striped table-hover">
+        {foreach $meeting as $meet}
+            {if !empty($meet ['city'])}
+                <tr>
+                    <th>Mesto</th>
+                    <td>{$meet ['city']}</td>
+                </tr>
+            {/if}
+            {if !empty($meet ['name'])}
+                <tr>
+                    <th>Misto</th>
+                    <td>{$meet ['name']}</td>
+                </tr>
+            {/if}
+            {if !empty($meet ['start'])}
+                <tr>
+                    <th>Datum a cas</th>
+                    <td>{$meet ['start']}</td>
+                </tr>
+            {/if}
+            {if !empty($meet ['description'])}
+                <tr>
+                    <th>Popis</th>
+                    <td>{$meet ['description']}</td>
+                </tr>
+            {/if}
+            {if !empty($meet ['duration'])}
+                <tr>
+                    <th>Doba konani</th>
+                    <td>{$meet ['duration']}</td>
+                </tr>
+            {/if}
+        {/foreach}
+    </table>
+    <br>
+    <br>
+
+    {if (empty($person))}
+        <h4>Ucastnici schuzky</h4>    
+        <table>
+            <td>
+                <a href='{link addPerson}?id={$meet['id_meeting']}' class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plus"></span> Pridat osobu
+                </a>
+            </td> 
+        </table>
+        <br>
+
+    {else}
+        <h4>Ucastnici schuzky</h4>    
+        <table>
+            <td>
+                <a href='{link addPerson}?id={$meet['id_meeting']}' class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plus"></span> Pridat osobu
+                </a>
+            </td> 
+        </table>
+        <br>
+
+        <table class="table table-striped table-hover">
+            <th>Jmeno</th>
+            <th>Odstranit</th>
+
+            {foreach $person as $per}
+                <tr>
+                    <td>{$per['first_name']}</td>
+                    <td>
+                        <form onsubmit = "return confirm
+                                        ('Opravdu chcete odstranit vybranou osobu?')" 
+                              action = "{link deletePerson}" 
+                              method="post">
+                            <input type="hidden" name="idPer" value="{$meet['id_person']}">
+                            <input type="hidden" name="id" value="{$meet['id_meeting']}">
+                            <button type="submit" class="btn btn-default">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </form>  
+                    </td>
+                </tr>
+            {/foreach}
+        </table>
+    {/if}
+    <br>
+
+</div>
+{/block}

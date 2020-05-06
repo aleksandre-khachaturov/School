@@ -1,0 +1,271 @@
+# depslib dependency file v1.0
+1479390226 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\inventar.cpp
+	"Inventar.h"
+
+1481213773 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\inventar.h
+	<iostream>
+	<vector>
+	"Suroviny.h"
+
+1481213857 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\suroviny.h
+	<iostream>
+
+1479987586 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\lod.cpp
+	"Lod.h"
+
+1481213783 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\lod.h
+	<iostream>
+	"Inventar.h"
+	"Zbran.h"
+	"Obrana.h"
+
+1481213850 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\zbran.h
+	<iostream>
+
+1481485269 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\obrana.h
+	<iostream>
+
+1481213596 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\main.cpp
+	<iostream>
+	"Hra.h"
+
+1479387759 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\obrana.cpp
+	"Obrana.h"
+
+1479903209 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\pirat.cpp
+	"Pirat.h"
+
+1481213812 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\pirat.h
+	<iostream>
+	"Zbran.h"
+	"Obrana.h"
+	"SilnaObrana.h"
+	"SlabaObrana.h"
+
+1481481110 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\planeta.cpp
+	"Planeta.h"
+	<windows.h>
+
+1481213822 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\planeta.h
+	<iostream>
+	"Lod.h"
+	"Pirat.h"
+
+1481481995 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\silnaobrana.cpp
+	"SilnaObrana.h"
+
+1481213829 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\silnaobrana.h
+	<iostream>
+	"Obrana.h"
+
+1479669115 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\slabaobrana.cpp
+	"SlabaObrana.h"
+
+1481213835 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\slabaobrana.h
+	<iostream>
+	"Obrana.h"
+
+1479388284 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\suroviny.cpp
+	"Suroviny.h"
+
+1479388358 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\zbran.cpp
+	"Zbran.h"
+
+1481485310 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\hra.cpp
+	"Hra.h"
+
+1481213754 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\hra.h
+	<iostream>
+	<vector>
+	"Lod.h"
+	"Mapa.h"
+
+1481213797 c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\mapa.h
+	<iostream>
+	<vector>
+	"Planeta.h"
+	"Suroviny.h"
+
+1481486069 source:c:\users\aleksandre\desktop\newgamezoo\gamecode\gamelod\mapa.cpp
+	"Mapa.h"
+
+1481485310 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\hra.cpp
+	"Hra.h"
+
+1481213754 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\hra.h
+	<iostream>
+	<vector>
+	"Lod.h"
+	"Mapa.h"
+
+1481213783 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\lod.h
+	<iostream>
+	"Inventar.h"
+	"Zbran.h"
+	"Obrana.h"
+
+1481213773 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\inventar.h
+	<iostream>
+	<vector>
+	"Suroviny.h"
+
+1481213857 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\suroviny.h
+	<iostream>
+
+1481213850 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\zbran.h
+	<iostream>
+
+1481485269 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\obrana.h
+	<iostream>
+
+1481213797 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\mapa.h
+	<iostream>
+	<vector>
+	"Planeta.h"
+	"Suroviny.h"
+
+1481213822 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\planeta.h
+	<iostream>
+	"Lod.h"
+	"Pirat.h"
+
+1481213812 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\pirat.h
+	<iostream>
+	"Zbran.h"
+	"Obrana.h"
+	"SilnaObrana.h"
+	"SlabaObrana.h"
+
+1481213829 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\silnaobrana.h
+	<iostream>
+	"Obrana.h"
+
+1481213835 c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\slabaobrana.h
+	<iostream>
+	"Obrana.h"
+
+1481732277 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\inventar.cpp
+	"Inventar.h"
+
+1481486495 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\lod.cpp
+	"Lod.h"
+
+1481213596 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\main.cpp
+	<iostream>
+	"Hra.h"
+
+1481486069 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\mapa.cpp
+	"Mapa.h"
+
+1479387759 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\obrana.cpp
+	"Obrana.h"
+
+1479903209 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\pirat.cpp
+	"Pirat.h"
+
+1481481110 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\planeta.cpp
+	"Planeta.h"
+	<windows.h>
+
+1481481995 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\silnaobrana.cpp
+	"SilnaObrana.h"
+
+1479669115 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\slabaobrana.cpp
+	"SlabaObrana.h"
+
+1479388284 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\suroviny.cpp
+	"Suroviny.h"
+
+1479388358 source:c:\users\aleksandre\desktop\reporzitar\gamecode\gamelod\zbran.cpp
+	"Zbran.h"
+
+1483828368 source:c:\users\aleksandre\desktop\gamecode\gamelod\hra.cpp
+	"Hra.h"
+
+1481213754 c:\users\aleksandre\desktop\gamecode\gamelod\hra.h
+	<iostream>
+	<vector>
+	"Lod.h"
+	"Mapa.h"
+
+1481213783 c:\users\aleksandre\desktop\gamecode\gamelod\lod.h
+	<iostream>
+	"Inventar.h"
+	"Zbran.h"
+	"Obrana.h"
+
+1481213773 c:\users\aleksandre\desktop\gamecode\gamelod\inventar.h
+	<iostream>
+	<vector>
+	"Suroviny.h"
+
+1481213857 c:\users\aleksandre\desktop\gamecode\gamelod\suroviny.h
+	<iostream>
+
+1481213850 c:\users\aleksandre\desktop\gamecode\gamelod\zbran.h
+	<iostream>
+
+1481485269 c:\users\aleksandre\desktop\gamecode\gamelod\obrana.h
+	<iostream>
+
+1483830354 c:\users\aleksandre\desktop\gamecode\gamelod\mapa.h
+	<iostream>
+	<vector>
+	"Planeta.h"
+	"Suroviny.h"
+
+1481213822 c:\users\aleksandre\desktop\gamecode\gamelod\planeta.h
+	<iostream>
+	"Lod.h"
+	"Pirat.h"
+
+1481213812 c:\users\aleksandre\desktop\gamecode\gamelod\pirat.h
+	<iostream>
+	"Zbran.h"
+	"Obrana.h"
+	"SilnaObrana.h"
+	"SlabaObrana.h"
+
+1481213829 c:\users\aleksandre\desktop\gamecode\gamelod\silnaobrana.h
+	<iostream>
+	"Obrana.h"
+
+1481213835 c:\users\aleksandre\desktop\gamecode\gamelod\slabaobrana.h
+	<iostream>
+	"Obrana.h"
+
+1483831516 source:c:\users\aleksandre\desktop\gamecode\gamelod\inventar.cpp
+	"Inventar.h"
+
+1483831608 source:c:\users\aleksandre\desktop\gamecode\gamelod\lod.cpp
+	"Lod.h"
+
+1481213596 source:c:\users\aleksandre\desktop\gamecode\gamelod\main.cpp
+	<iostream>
+	"Hra.h"
+
+1483830396 source:c:\users\aleksandre\desktop\gamecode\gamelod\mapa.cpp
+	"Mapa.h"
+
+1479387759 source:c:\users\aleksandre\desktop\gamecode\gamelod\obrana.cpp
+	"Obrana.h"
+
+1479903209 source:c:\users\aleksandre\desktop\gamecode\gamelod\pirat.cpp
+	"Pirat.h"
+
+1483827938 source:c:\users\aleksandre\desktop\gamecode\gamelod\planeta.cpp
+	"Planeta.h"
+	<windows.h>
+
+1481481995 source:c:\users\aleksandre\desktop\gamecode\gamelod\silnaobrana.cpp
+	"SilnaObrana.h"
+
+1479669115 source:c:\users\aleksandre\desktop\gamecode\gamelod\slabaobrana.cpp
+	"SlabaObrana.h"
+
+1483823883 source:c:\users\aleksandre\desktop\gamecode\gamelod\suroviny.cpp
+	"Suroviny.h"
+
+1479388358 source:c:\users\aleksandre\desktop\gamecode\gamelod\zbran.cpp
+	"Zbran.h"
+

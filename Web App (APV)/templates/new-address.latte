@@ -1,0 +1,89 @@
+{extends layout.latte}
+
+{block title}Nova osoba{/block}
+
+{block body}
+<form method="post" class="form-horizontal">
+    <div class="container">
+        <div class="form-group">
+            <h1>Adresni udaje</h1><br>
+            <div class="col-sm-offset-2 col-sm-4 control-label povinne">
+                <div id="faq">
+
+                    <div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" povinne>Mesto</label>
+                            <div class="col-sm-4">
+                                <input name="mesto" type="text" value="{$person['mesto']}">
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" povinne>Ulice</label>
+                            <div class="col-sm-4">
+                                <input name="ulice" type="text" value="{$person['ulice']}"><br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" povinne>Cislo domu</label>
+                            <div class="col-sm-4">
+                                <input name="dom" type="number" value="{$person['dom']}"><br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" povinne>PSC</label>
+                            <div class="col-sm-4">
+                                <input name="psc" type="number" value="{$person['psc']}"><br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" povinne>Stat</label>
+                            <div class="col-sm-4">
+                                <input name="stat" type="text" value="{$person['stat']}"><br>
+                            </div>
+                        </div>    
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" povinne>Nazev</label>
+                            <div class="col-sm-4">
+                                <input name="descr" type="text" value="{$person['descr']}"><br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" povinne>Longitude</label>
+                            <div class="col-sm-4">
+                                <input name="long" type="number" value="{$person['long']}"><br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" povinne>Latitude</label>
+                            <div class="col-sm-4">
+                                <input name="lat" type="number" value="{$person['lat']}"><br>
+                            </div>
+                        </div>    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+        <button type="submit" class="btn btn-primary">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                Ulozit
+            </span>
+        </button>
+    </div>
+</div>
+
+</form>
+{/block}

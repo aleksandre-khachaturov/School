@@ -1,0 +1,54 @@
+#faqRoot {
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+	cursor: pointer;
+}
+
+#faqindex {
+	float: right;
+	width: 190px;
+	font-family: consolas,verdana,helvetica,sans-serif;
+}
+
+#faqindex a, #faqindex a:visited {
+	text-decoration: none;color: #666;
+}
+
+#faqindex a:active, #faqindex a:hover {
+	color: #000;
+	border-bottom:dotted #ccc 1px;
+}
+
+#faqindex ul {
+	list-style-type: square;
+	list-style-image: none;
+	list-style-position: outside;
+	padding-left:25px;
+	line-height: 18px;
+	margin-top: 5px;
+	font-size:80%;
+}
+
+#faqindex ul li {
+	color:#666666;
+	white-space:nowrap;
+}
+
+#faqindex h2 {
+	font-size: 10px;
+	padding: 0;
+	margin-bottom: 5px;
+	border-bottom: dotted 1px #ccc;
+	color: #666666;
+}
+#faq {
+	float:left;
+	width: 600px;
+	margin: 0 auto; 
+	font-family: consolas,verdana,helvetica,sans-serif;
+}
+
+#faq {
+	margin-bottom: 25px;
+}

@@ -1,0 +1,44 @@
+{extends layout.latte}
+
+{block title}Editace osoby{/block}
+
+{block body}
+
+
+
+<form method="post" class="form-horizontal">
+    <div class="container">
+        <h1>Nove kontaktni udaje</h1><br>
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Typ kontaktu *</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="conTy" required>
+                    <option value="">Vyber typ</option>
+                    {foreach $contactType as $conType}
+                    <option value="{$conType['id_contact_type']}" {if $conType['id_contact_type'] == $nContact['conTy']}selected="selected"{/if}>
+                        {$conType['name']}
+                    </option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+        <div class="form-group"> 
+            <label class="col-sm-2 control-label povinne">Kontakt</label>
+            <div class="col-sm-4">
+                <input name="con" class="form-control" type="text" value="{$nContact['con']}">
+                <br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                        Pridat
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+</block>
